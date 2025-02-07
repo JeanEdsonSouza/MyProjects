@@ -44,7 +44,7 @@ def janela_consulta():
     return sg.Window('Consulta', layout=layout,resizable=True  ,finalize=True)
 
 
-def janela_cadrasto():
+def janela_cadastro():
     layout =[
         [sg.Text('Pagina de Cadrasto')],
         [sg.Image(r'/home/jean/Desktop/Art_Doce 1.2/Art_Doce.png')],
@@ -108,7 +108,7 @@ while True:
         janela3 = janela_consulta()
     if window == janela3 and event == 'pagina cadastro':
         janela3.hide() 
-        janela2=janela_cadrasto()
+        janela2=janela_cadastro()
     if window == janela3 and event == 'Atualizar':
         resultado = back.read_task()
         window.find_element('-BOX-').Update(resultado)
@@ -141,7 +141,7 @@ while True:
         janela3.hide()
         janela2.un_hide()
     if window == janela2 and event == 'pagina cadastro':
-        janela2 = janela_cadrasto()
+        janela2 = janela_cadastro()
         janela3.hide()
     if window == janela3 and event == sg.WINDOW_CLOSED:
         break
